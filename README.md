@@ -1,15 +1,15 @@
 ## Confusion Resto is Reactjs Webapp.
 To get started use: 
 > npm install 
-> npm install
+> npm start
 
 .................................................
 ### Technology Stack: 
--> Javascript
--> ReactJS
--> Bootstrap ( ReactStrap )
--> Redux-thunk 
--> Redux
+- Javascript
+- ReactJS
+- Bootstrap ( ReactStrap )
+- Redux-thunk 
+- Redux
 
 .........................................
 ### Learning curve : 
@@ -19,5 +19,5 @@ To get started use:
 4. React component lifecycle with respect to redux
 5. Redux for data management
 6. redux thunk for asyn action
-7. JSON api
-........................................................
+7. JSON server
+
