@@ -6,7 +6,7 @@ import {
   NavbarBrand,
   NavbarToggler,
   Jumbotron,
-  Collapse
+  Collapse,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
@@ -14,67 +14,83 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isNavOpen: false
+      isNavOpen: false,
     };
   }
 
   toggleNav = () => {
     this.setState({
-      isNavOpen: !this.state.isNavOpen
+      isNavOpen: !this.state.isNavOpen,
     });
   };
 
   render() {
     return (
       <div>
-        <Navbar dark expand="md">
+        <Navbar light expand="md">
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
-            <NavbarBrand className="mr-auto" href="/">
-              <img
-                src="assets/images/logo.png"
-                height="30"
-                width="41"
-                alt="Ristorante Con Fusion"
-              />
+            <NavbarBrand href="/">
+              <strong>Confusion</strong> Resto
             </NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar>
+              <Nav navbar className="ml-auto">
                 <NavItem>
-                  <NavLink className="nav-link" to="/home">
-                    <span className="fa fa-home fa-lg"></span>Home
+                  <NavLink
+                    className="nav-link pr-5 font-weight-bold"
+                    to="/home"
+                  >
+                    Home
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/aboutus">
-                    <span className="fa fa-info fa-lg"></span> About Us
+                  <NavLink
+                    className="nav-link pr-5 font-weight-bold"
+                    to="/menu"
+                  >
+                    Menu
+                  </NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink
+                    className="nav-link pr-5 font-weight-bold"
+                    to="/contactus"
+                  >
+                    Contact
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/menu">
-                    <span className="fa fa-list fa-lg"></span> Menu
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to="/contactus">
-                    <span className="fa fa-address-card fa-lg"></span> Contact
-                    Us
+                  <NavLink
+                    className="nav-link pr-5 font-weight-bold"
+                    to="/aboutus"
+                  >
+                    About
                   </NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
           </div>
         </Navbar>
+
         <Jumbotron>
           <div className="container">
-            <div className="row row-header">
-              <div className="col-12 col-sm-6">
-                <h1>Ristorante con Fusion</h1>
+            <div className="row mt-3 mb-3">
+              <div className="col-sm-8 m-auto text-align-center ">
+                <h1>Confusion Resto</h1>
                 <p>
-                  We take inspiration from the World's best cuisines, and create
-                  a unique fusion experience. Our lipsmacking creations will
-                  tickle your culinary senses!
+                  We take inspiration from the{" "}
+                  <span className="text-success">World's best cuisines</span>,
+                  and create a unique fusion experience. Our lipsmacking
+                  creations will tickle your culinary senses!
                 </p>
+              </div>
+              <div className="col-sm-4 pl-3">
+                <img
+                  src="/assets/images/bg.png"
+                  alt="bg"
+                  style={{ height: "250px", width: "100%" }}
+                />
               </div>
             </div>
           </div>

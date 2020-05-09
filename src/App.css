@@ -1,10 +1,21 @@
 body {
-  font-family: "Hind";
-  font-size: 22px;
+  font-family: "Archivo", sans-serif;
+  /* font-family: "Spectral", serif;*/
+  font-size: 18px;
+  color: black;
 }
+.primary-background {
+  background-color: #2ecc71;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .row-header {
   margin: 0px auto;
   padding: 0px auto;
+  font-size: 20px;
 }
 
 .row-content {
@@ -12,18 +23,20 @@ body {
   padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
   min-height: 400px;
+  font-size: 18px;
 }
 
 .footer {
-  background-color: #d1c4e9;
+  background-color: #5cc085;
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
+  color: black;
 }
 .jumbotron {
-  padding: 70px 30px 70px 30px;
-  margin: 0px auto;
-  background: #9575cd;
-  color: floralwhite;
+  margin: 0px;
+  background: white;
+  color: rgb(22, 21, 21);
+  font-weight: 400;
 }
 
 address {
@@ -32,6 +45,11 @@ address {
   color: #0f0f0f;
 }
 
-.navbar-dark {
-  background-color: #512da8;
+.navbar-light {
+  background-color: #2ecc71;
+  font-size: medium;
+  color: black;
+}
+.link-text {
+  color: "white";
 }
